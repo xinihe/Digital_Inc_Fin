@@ -9,14 +9,14 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout empty repo
+      - name: Clone from Gitee
+        env:
+          GITEE_REPO_URL: ${{ secrets.GITEE_REPO_URL }}
         run: |
           git clone --mirror "$GITEE_REPO_URL" mirror
-          cd mirror
-          git remote set-url --push origin https://github.com/${{ github.repository }}.git
-          git push --mirror
 
-    env:
-      GITEE_REPO_URL: ${{ secrets.GITEE_REPO_URL }}
-      GIT_ASKPASS: /dev/null
-      GIT_TERMINAL_PROMPT: 0
+      - name: Push to GitHub
+        run: |
+          cd mirror
+          git remote set-url --push origin https://x-access-token:${{ secrets.GIT_TOKEN_PUSH }}@github.com/${{ github.repository }}.git
+          git push --mirror      
