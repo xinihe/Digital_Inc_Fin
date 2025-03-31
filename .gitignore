@@ -1,0 +1,10 @@
+# macOS system files
+.DS_Store
+
+# Obsidian vault config (user-specific)
+.obsidian/
+
+# Optional: node_modules, python cache, etc.
+node_modules/
+__pycache__/
+*.pyc
