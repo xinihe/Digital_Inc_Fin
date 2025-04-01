@@ -282,7 +282,7 @@ $$
 $$
 
 
-
+$$H D^{2}(P_{1},P_{2})=1-\sqrt{\frac{2\sigma_{1}\sigma_{2}}{\sigma_{1}^{2}+\sigma_{2}^{2}}}\exp\left[-\frac{1}{4}\frac{(\mu_{1}-\mu_{2})^{2}}{\sigma_{1}^{2}+\sigma_{2}^{2}}\right],$$
 ###  LaTeX Syntax Cheatsheet
 
 | Concept       | Syntax Example                                              | Rendered Output                            |
