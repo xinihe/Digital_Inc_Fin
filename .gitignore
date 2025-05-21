@@ -7,4 +7,6 @@
 # Optional: node_modules, python cache, etc.
 node_modules/
 __pycache__/
+fonts/
+Excalidraw/
 *.pyc
